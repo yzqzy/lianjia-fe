@@ -1,6 +1,9 @@
 import type { Question, Result } from '@/types'
 
-export async function chat(data: Question, apiKey: string): Promise<Result> {
+export async function conversation(
+  data: Question,
+  apiKey: string
+): Promise<Result> {
   try {
     const result = await fetch(
       'https://chat.yueluo.club/api/chat/conversation',
